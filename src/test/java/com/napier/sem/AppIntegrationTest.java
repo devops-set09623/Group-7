@@ -220,4 +220,14 @@ public class AppIntegrationTest {
     }
 
 
+    @Test
+    void testReportTwentyFive()
+    {
+        Population r = (Population) db.getReportTwentyFive();
+
+        Population.PopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(20387900, i.get_popNotInCity());
+    }
+
+
 }
