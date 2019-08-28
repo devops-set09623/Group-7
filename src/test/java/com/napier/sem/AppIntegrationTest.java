@@ -229,5 +229,23 @@ public class AppIntegrationTest {
         assertEquals(20387900, i.get_popNotInCity());
     }
 
+    @Test
+    void testReportTwentySix()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportTwentySix();
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(6078749450L, i.get_population());
+    }
+
+    @Test
+    void testReportTwentySeven()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportTwentySeven("Asia");
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(3705025700L, i.get_population());
+    }
+
 
 }

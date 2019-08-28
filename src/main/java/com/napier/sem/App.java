@@ -249,7 +249,12 @@ public class App
                 app.printReport(report);
                 break;
 
-
+            case 27:
+                System.out.println("Enter Continent: ");
+                String contt = sc.nextLine();
+                report = db.getReportTwentySeven(contt);
+                app.printReport(report);
+                break;
 
 
             default:
