@@ -949,4 +949,34 @@ public class DatabaseHandler {
     }
 
 
+    protected Report getReportThirtyOne(String name)  // REPORT 31
+    {
+        try {
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "select name, population from city where name = ?";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, name);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+
+
 }

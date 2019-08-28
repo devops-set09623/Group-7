@@ -279,6 +279,13 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 31:
+                System.out.println("Enter City: ");
+                String cty = sc.nextLine();
+                report = db.getReportThirtyOne(cty);
+                app.printReport(report);
+                break;
+
 
 
 
