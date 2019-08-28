@@ -749,4 +749,29 @@ public class DatabaseHandler {
 
     }
 
+    protected Report getReportTwentyFour()  // REPORT 24
+    {
+        try {
+            Statement stmt = con.createStatement();
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "Select country.region, SUM(country.population) as regionPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.region;";
+            rset = stmt.executeQuery(strSelect);
+
+            Population report = new Population();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                Population.PopulationReportItem item = report.new PopulationReportItem(rset.getString(1), rset.getLong(2), rset.getLong(3), rset.getFloat(4), rset.getLong(5), rset.getFloat(6));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
 }
