@@ -6,10 +6,7 @@ public class TotalPopulation extends Report {
 
     private ArrayList<TotalPopulationReportItem> _reportsItems = new ArrayList<>();
 
-    @Override
-    ReportType getReportType() {
-        return ReportType.TotalPopulationReport;
-    }
+
 
     public ArrayList<TotalPopulationReportItem> get_reportsItems() {
         return _reportsItems;

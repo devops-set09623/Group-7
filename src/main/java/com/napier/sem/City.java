@@ -25,13 +25,7 @@ public class City extends Report {
         _reportsItems.add(item);
     } // method to add item to report
 
-    /**
-     * @return report format
-     */
-    @Override
-    ReportType getReportType() {
-        return ReportType.CityReport;
-    }
+
 
     /**
      * @return report format
@@ -83,8 +77,6 @@ public class City extends Report {
             return _country;
         }
 
-        public void set_country(String _country) {
-            this._country = _country;
-        }
+
     }
 }
