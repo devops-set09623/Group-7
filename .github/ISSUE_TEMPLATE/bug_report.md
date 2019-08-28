@@ -1,5 +1,5 @@
 ---
-name: Bug report
+name: Bug report system for the Group 7 Devops Module
 about: Help us track down bugs in JuMP
 
 ---
