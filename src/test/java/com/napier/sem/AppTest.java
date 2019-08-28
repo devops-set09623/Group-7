@@ -36,6 +36,7 @@ public class AppTest
         item.set_name("Myanmar");
         item.set_population(100000);
 
+
         app.printReport(r);
     }
 
@@ -48,6 +49,7 @@ public class AppTest
     @Test
     void testprintReportHeaderCity(){
         City c = new City();
+
         c.printReportHeader();
     }
 
@@ -55,6 +57,7 @@ public class AppTest
     void testprintReportHeaderPopulation(){
         Population p = new Population();
         p.printReportHeader();
+
     }
 
     @Test
@@ -62,6 +65,7 @@ public class AppTest
         TotalPopulation tp = new TotalPopulation();
         tp.printReportHeader();
     }
+
 
 
 

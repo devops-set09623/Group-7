@@ -69,9 +69,7 @@ public class City extends Report {
             return _district;
         }
 
-        public void set_district(String _district) {
-            this._district = _district;
-        }
+
 
         public String get_country() {
             return _country;
