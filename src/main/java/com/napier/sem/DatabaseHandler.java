@@ -635,7 +635,33 @@ public class DatabaseHandler {
         return null;
     }
 
+    protected Report getReportTwenty(int number) //REPORT 20
+    {
+        try {
+            String strSelect = "";
+            ResultSet rset = null;
 
+            int num = number;
+            strSelect = "select city.name, country.name, city.population from city city join country country on id=capital order by city.population DESC LIMIT ?;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setInt(1,num);
+
+            rset = preparedStatement.executeQuery();
+            CapitalCity report = new CapitalCity();
+
+            while (rset.next()){
+                CapitalCity.CapitalCityReportItem item = report.new CapitalCityReportItem(rset.getString(1), rset.getString(2), rset.getInt(3));
+                report.addItemToReport(item);
+            }
+
+            return report;
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+
+        return null;
+    }
 
 
 

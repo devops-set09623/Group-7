@@ -205,6 +205,13 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 20:
+                System.out.println("Enter no: ");
+                int re = sc.nextInt();
+                report = db.getReportTwenty(re);
+                app.printReport(report);
+                break;
+
             default:
                 System.out.println("Not implemented yet");
                 break;
