@@ -30,7 +30,7 @@ public class App
             db.connect(args[0]);
         }
 
-        app.printReportOptions();
+        app.printMenu();
 
 
         // Loop until user enters 0 to exit
@@ -216,44 +216,50 @@ public class App
     /**
      * Print report options to console
      */
-    private void printReportOptions() {
-        System.out.println("Select a report to view:");
-        System.out.println("1. All the countries in the world organised by largest population to smallest");
-        System.out.println("2. All the countries in a continent organised by largest population to smallest");
-        System.out.println("3. All the countries in a region organised by largest population to smallest");
-        System.out.println("4. The top N populated countries in the world");
-        System.out.println("5. The top N populated continent in the world");
-        System.out.println("6. The top N populated countries in a region");
-        System.out.println("7. All the cities in the world organised by largest population to smallest");
-        System.out.println("8. All the cities in a continent organised by largest population to smallest");
-        System.out.println("9. All the cities in a region organised by largest population to smallest");
-        System.out.println("10. All the cities in a country organised by largest population to smallest");
-        System.out.println("11. All the cities in a district organised by largest population to smallest.");
-        System.out.println("12. The top N populated cities in the world");
-        System.out.println("13. The top N populated cities in a continent");
-        System.out.println("14. The top N populated cities in a region ");
-        System.out.println("15. The top N populated cities in a country ");
-        System.out.println("16. The top N populated cities in a district ");
-        System.out.println("17. All the capital cities in the world organised by largest population to smallest");
-        System.out.println("18. All the capital cities in a continent organised by largest population to smallest");
-        System.out.println("19. All the capital cities in a region organised by largest to smallest");
-        System.out.println("20. The top N populated capital cities in the world");
-        System.out.println("21. The top N populated capital cities in a continent");
-        System.out.println("22. The top N populated capital cities in a region");
-        System.out.println("23. The population of people, people living in cities, and people not living in cities in each continent");
-        System.out.println("24. The population of people, people living in cities, and people not living in cities in each region");
-        System.out.println("25. The population of people, people living in cities, and people not living in cities in each country");
-        System.out.println("26. The population of the world");
-        System.out.println("27. The population of a continent");
-        System.out.println("28. The population of a region");
-        System.out.println("29. The population of a country");
-        System.out.println("30. The population of a district");
-        System.out.println("31. The population of a city");
-        System.out.println("32. The number of people who speak Chinese");
-        System.out.println("33. The number of people who speak English");
-        System.out.println("34. The number of people who speak Hindi");
-        System.out.println("35. The number of people who speak Spanish");
-        System.out.println("36. The number of people who speak Arabic");
+    private void printMenu() {
+        String[] reportNo={
+                "All the countries in the world organised by largest population to smallest",
+                "All the countries in a continent organised by largest population to smallest",
+                "All the countries in a region organised by largest population to smallest",
+                "The top N populated countries in the world",
+                "The top N populated continent in the world",
+                "The top N populated countries in a region",
+                "All the cities in the world organised by largest population to smallest",
+                "All the cities in a continent organised by largest population to smallest",
+                "All the cities in a region organised by largest population to smallest",
+                "All the cities in a country organised by largest population to smallest",
+                "All the cities in a district organised by largest population to smallest.",
+                "The top N populated cities in the world",
+                "The top N populated cities in a continent",
+                "The top N populated cities in a continent",
+                "The top N populated cities in a region",
+                "The top N populated cities in a country",
+                "The top N populated cities in a district",
+                "All the capital cities in the world organised by largest population to smallest",
+                "All the capital cities in a continent organised by largest population to smallest",
+                "All the capital cities in a region organised by largest to smallest",
+                "The top N populated capital cities in the world",
+                "The top N populated capital cities in a continent",
+                "The top N populated capital cities in a region",
+                "The population of people, people living in cities, and people not living in cities in each continent",
+                "The population of people, people living in cities, and people not living in cities in each region",
+                "The population of people, people living in cities, and people not living in cities in each country",
+                "The population of the world",
+                "The population of a continent",
+                "The population of a region",
+                "The population of a country",
+                "The population of a district",
+                "The population of a city",
+                "The number of people who speak Chinese",
+                "The number of people who speak English",
+                "The number of people who speak Hindi",
+                "The number of people who speak Spanish",
+                "The number of people who speak Arabic"
+        };
+        System.out.println("Choose a report no:");
+        for(int i=0; i<reportNo.length;i++){
+            System.out.printf(" %d. %s%n ",i+1,reportNo[i]);
+        }
         System.out.println("\nEnter 0 to exit\n");
     }
 
