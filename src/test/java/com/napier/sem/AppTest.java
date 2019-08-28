@@ -3,8 +3,17 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.Base64;
+
 public class AppTest
 {
+
+
+
     static App app;
     static DatabaseHandler db;
 
@@ -28,6 +37,12 @@ public class AppTest
         item.set_population(100000);
 
         app.printReport(r);
+    }
+
+    @Test
+    void testprintReportHeader(){
+        CapitalCity c = new CapitalCity();
+        c.printReportHeader();
     }
 
 
