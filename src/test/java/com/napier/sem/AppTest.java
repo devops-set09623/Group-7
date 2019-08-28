@@ -40,8 +40,14 @@ public class AppTest
     }
 
     @Test
-    void testprintReportHeader(){
+    void testprintReportHeaderCapitalCity(){
         CapitalCity c = new CapitalCity();
+        c.printReportHeader();
+    }
+
+    @Test
+    void testprintReportHeaderCity(){
+        City c = new City();
         c.printReportHeader();
     }
 
