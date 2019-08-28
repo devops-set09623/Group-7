@@ -919,5 +919,34 @@ public class DatabaseHandler {
 
     }
 
+    protected Report getReportThirty(String district)  // REPORT 30
+    {
+        try {
+            Statement stmt = con.createStatement();
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "select district, sum(population) as 'District Population' from city where district = ? group by district;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, district);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
 
 }

@@ -272,6 +272,15 @@ public class App
                 break;
 
 
+            case 30:
+                System.out.println("Enter District: ");
+                String dis = sc.nextLine();
+                report = db.getReportThirty(dis);
+                app.printReport(report);
+                break;
+
+
+
 
             default:
                 System.out.println("Not implemented yet");
@@ -298,7 +307,6 @@ public class App
                 "All the cities in a country organised by largest population to smallest",
                 "All the cities in a district organised by largest population to smallest.",
                 "The top N populated cities in the world",
-                "The top N populated cities in a continent",
                 "The top N populated cities in a continent",
                 "The top N populated cities in a region",
                 "The top N populated cities in a country",
