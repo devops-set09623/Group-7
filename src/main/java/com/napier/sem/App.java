@@ -264,6 +264,13 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 29:
+                System.out.println("Enter Country: ");
+                String cou = sc.nextLine();
+                report = db.getReportTwentyNine(cou);
+                app.printReport(report);
+                break;
+
 
 
             default:
