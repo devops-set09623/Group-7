@@ -1,7 +1,6 @@
 package com.napier.sem;
 
-import java.sql.*;
-import java.util.ArrayList;
+
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -230,6 +229,11 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 23:
+                report = db.getReportTwentyThree();
+                app.printReport(report);
+                break;
+
             default:
                 System.out.println("Not implemented yet");
                 break;
@@ -314,6 +318,14 @@ public class App
             CapitalCity.printReportHeader();
             for (CapitalCity.CapitalCityReportItem item : ((CapitalCity) report).get_reportsItems()){
                 System.out.printf(CapitalCity.getReportFormat(),item.get_name(),item.get_population(),item.get_Country());
+                System.out.print("\n");
+            }
+        }
+
+        if (report instanceof Population){
+            Population.printReportHeader();
+            for (Population.PopulationReportItem item : ((Population) report).get_reportsItems()){
+                System.out.printf(Population.getReportFormat(),item.get_name(),item.get_population(),item.get_popNotInCity(),item.get_popInCity(),item.get_popNotInCityPercentage(),item.get_popinCityyPercentage());
                 System.out.print("\n");
             }
         }
