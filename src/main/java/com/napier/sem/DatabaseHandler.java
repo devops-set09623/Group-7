@@ -858,6 +858,35 @@ public class DatabaseHandler {
 
     }
 
+    protected Report getReportTwentyEight(String region)  // REPORT 28
+    {
+        try {
+            Statement stmt = con.createStatement();
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "SELECT region, sum(population) AS 'Region Population' FROM country WHERE region = ? group by region;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, region);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
 
 
 }

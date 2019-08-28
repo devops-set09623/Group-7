@@ -257,6 +257,15 @@ public class App
                 break;
 
 
+            case 28:
+                System.out.println("Enter Region: ");
+                String regg = sc.nextLine();
+                report = db.getReportTwentyEight(regg);
+                app.printReport(report);
+                break;
+
+
+
             default:
                 System.out.println("Not implemented yet");
                 break;
