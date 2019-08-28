@@ -210,5 +210,14 @@ public class AppIntegrationTest {
         assertEquals("North America", i.get_name());
     }
 
+    @Test
+    void testReportTwentyFour()
+    {
+        Population r = (Population) db.getReportTwentyFour();
+
+        Population.PopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals("Caribbean", i.get_name());
+    }
+
 
 }
