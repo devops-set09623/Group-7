@@ -1,6 +1,6 @@
 package com.napier.sem;
 
-import com.sun.tools.javac.code.Type;
+//import com.sun.tools.javac.code.Type;
 
 import java.sql.*;
 
@@ -665,6 +665,7 @@ public class DatabaseHandler {
         return null;
     }
 
+
     protected Report getReportTwentyOne (String continent, int number) // REPORT 21
     {
         try {
@@ -676,6 +677,34 @@ public class DatabaseHandler {
 
             PreparedStatement preparedStatement = con.prepareStatement(strSelect);
             preparedStatement.setString(1, continent);
+            preparedStatement.setInt(2, num);
+
+            rset = preparedStatement.executeQuery();
+            CapitalCity report = new CapitalCity();
+
+            while (rset.next()){
+                CapitalCity.CapitalCityReportItem item = report.new CapitalCityReportItem(rset.getString(1), rset.getString(2), rset.getInt(3));
+                report.addItemToReport(item);
+            }
+
+            return report;
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+    protected Report getReportTwentyTwo (String region, int number) // REPORT 22
+    {
+        try {
+            String strSelect = "";
+            ResultSet rset = null;
+
+            int num = number;
+            strSelect= "select city.name, country.name, city.population from city city join country country on id=capital where region= ? order by city.population DESC LIMIT ?;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, region);
             preparedStatement.setInt(2, num);
 
             rset = preparedStatement.executeQuery();

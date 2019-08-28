@@ -221,6 +221,15 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 22:
+                System.out.println("Enter Region: ");
+                String regi = sc.nextLine();
+                System.out.println("Enter number: ");
+                numb = sc.nextInt();
+                report = db.getReportTwentyTwo(regi, numb);
+                app.printReport(report);
+                break;
+
             default:
                 System.out.println("Not implemented yet");
                 break;
