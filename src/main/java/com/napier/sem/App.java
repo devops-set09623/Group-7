@@ -198,6 +198,12 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 19:
+                System.out.println("Enter region: ");
+                String regio = sc.nextLine();
+                report = db.getReportNineteen(regio);
+                app.printReport(report);
+                break;
 
             default:
                 System.out.println("Not implemented yet");
