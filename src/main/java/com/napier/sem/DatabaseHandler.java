@@ -831,7 +831,7 @@ public class DatabaseHandler {
     protected Report getReportTwentySeven(String continent)  // REPORT 27
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
@@ -861,7 +861,7 @@ public class DatabaseHandler {
     protected Report getReportTwentyEight(String region)  // REPORT 28
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
@@ -892,7 +892,7 @@ public class DatabaseHandler {
     protected Report getReportTwentyNine(String country)  // REPORT 29
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
@@ -922,7 +922,7 @@ public class DatabaseHandler {
     protected Report getReportThirty(String district)  // REPORT 30
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
