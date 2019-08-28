@@ -60,6 +60,6 @@
 # Team Contribution Report 
 |      | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 | Final Deliverable | Average |
 |------|---------------|---------------|---------------|---------------|-------------------|-------|
-| Tin Aung Yin | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 |
-| Min Hein Htet | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 |
-| Myat Thu Ta | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 | 0.33 |
+| Tin Aung Yin | 0.30 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32|
+| Min Hein Htet | 0.33 | 0.33 | 0.33 | 0.40 | 0.40 | 0.36 |
+| Myat Thu Ta | 0.33 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32 |
