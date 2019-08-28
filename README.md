@@ -20,6 +20,7 @@
 - Develop Build Status [![Build Status](https://travis-ci.org/devops-set09623/Group-7.svg?branch=develop)](https://travis-ci.org/devops-set09623/Group-7)
 - Add Code Coverage [![codecov](https://codecov.io/gh/devops-set09623/Group-7/branch/develop/graph/badge.svg)](https://codecov.io/gh/devops-set09623/Group-7)
 - Add Release Badge [![Releases](https://img.shields.io/github/release/devops-set09623/Group-7/all.svg?style=flat-square)](https://github.com/devops-set09623/Group-7/releases)
+- Add Batter Code Hub Badge[![BCH compliance](https://bettercodehub.com/edge/badge/devops-set09623/Group-7?branch=master)](https://bettercodehub.com/)
 #  Bug reporting system and Discussion bot
 ![](screenshot/bugreportsystem.PNG) 
 
