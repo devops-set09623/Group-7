@@ -20,12 +20,11 @@ public class AppTest
         Country r = new Country();
         Country.CountryReportItem item = new Country().new CountryReportItem();
         r.addItemToReport(item);
-
-        item.set_capital("Edinburgh");
-        item.set_code("ABC");
-        item.set_continent("Europe");
-        item.set_region("Midlothian");
-        item.set_name("Scotland");
+        item.set_capital("Yangon");
+        item.set_code("MM");
+        item.set_continent("Asia");
+        item.set_region("South east Asia");
+        item.set_name("Myanmar");
         item.set_population(100000);
 
         app.printReport(r);
