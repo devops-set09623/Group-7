@@ -977,6 +977,59 @@ public class DatabaseHandler {
         return null;
     }
 
+    protected Report getReportThirtyTwo(){
+        return getLanguageReport("chinese");
+    }
+
+    protected Report getReportThirtyThree(){
+        return getLanguageReport("english");
+    }
+
+
+    protected Report getReportThirtyFour(){
+        return getLanguageReport("hindi");
+    }
+
+
+    protected Report getReportThirtyFive(){
+        return getLanguageReport("spanish");
+    }
+
+    protected Report getReportThirtySix(){
+        return getLanguageReport("arabic");
+    }
+
+
+
+
+
+
+
+    protected Report getLanguageReport(String language)  // REPORT 32-36
+    {
+        try {
+            String strSelect = "select language, sum(population) from country join countrylanguage on (code = countrycode) where countrylanguage.language = ?";
+            ResultSet rset = null;
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, language);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
 
 
 }
