@@ -1,38 +1,17 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: Bug report system for the Group 7 Devops Module
+about: Help us track down bugs in JuMP
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+Welcome to JuMP!
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Please read the following before posting a new bug report:
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+- If you have a question or are unsure if the behavior you're experiencing is a bug, please search or post to our Discourse site: https://discourse.julialang.org/t/greetings/28072?u=tinaungyin-mm. Questions posted to Discourse have broader visibility and are likely to be answered more quickly than issues filed here.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+- If you're experiencing a bug that is solver-specific (e.g., it only happens when you use Gurobi), the issue is best raised at the relevant solver-wrapper repository (e.g., Gurobi.jl). If you are unsure, you should raise the problem on Discourse first.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+- If you are reasonably confident your issue is a bug in JuMP, this is the right place. Be sure to include as much relevant information as possible, including a minimal reproducible example. See https://help.github.com/articles/basic-writing-and-formatting-syntax/ for background on how to format text and code on GitHub issues.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+Thanks for contributing to JuMP!
