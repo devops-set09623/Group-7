@@ -257,5 +257,12 @@ public class AppIntegrationTest {
         assertEquals(1507328000, i.get_population());
     }
 
+    @Test
+    void testReportTwentyNine()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportTwentyNine("Myanmar");
 
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(45611000, i.get_population());
+    }
 }
