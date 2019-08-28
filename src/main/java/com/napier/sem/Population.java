@@ -19,7 +19,7 @@ public class Population extends Report {
         _reportsItems.add(item);
     }
     public static String getReportFormat() {
-        return "%-40s  %-30s  %-30s  %-30s  %-30s  %-30s";
+        return "%-35s  %-20s  %-20s  %-20s  %-25s  %-25s";
     }
 
     public static void printReportHeader(){
