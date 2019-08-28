@@ -239,6 +239,14 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 25:
+                report = db.getReportTwentyFive();
+                app.printReport(report);
+                break;
+
+
+
+
             default:
                 System.out.println("Not implemented yet");
                 break;
