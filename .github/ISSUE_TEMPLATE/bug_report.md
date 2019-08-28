@@ -8,7 +8,7 @@ Welcome to JuMP!
 
 Please read the following before posting a new bug report:
 
-- If you have a question or are unsure if the behavior you're experiencing is a bug, please search or post to our Discourse site: https://discourse.julialang.org/t/greetings/28072?u=tinaungyin-mm. Questions posted to Discourse have broader visibility and are likely to be answered more quickly than issues filed here.
+- If you have a question or are unsure if the behavior you're experiencing is a bug, please search or post to our Discourse site: https://discourse.julialang.org/t/bug-report-system-of-the-group-7-for-devops-module/28073?u=tinaungyin-mm. Questions posted to Discourse have broader visibility and are likely to be answered more quickly than issues filed here.
 
 - If you're experiencing a bug that is solver-specific (e.g., it only happens when you use Gurobi), the issue is best raised at the relevant solver-wrapper repository (e.g., Gurobi.jl). If you are unsure, you should raise the problem on Discourse first.
 
