@@ -800,4 +800,31 @@ public class DatabaseHandler {
         return null;
 
     }
+
+
+    protected Report getReportTwentySix()  // REPORT 26
+    {
+        try {
+            Statement stmt = con.createStatement();
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "SELECT sum(population) AS 'World Population' FROM country;";
+            rset = stmt.executeQuery(strSelect);
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem("World Population", rset.getLong(1));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
 }

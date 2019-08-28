@@ -244,6 +244,11 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 26:
+                report = db.getReportTwentySix();
+                app.printReport(report);
+                break;
+
 
 
 
@@ -339,6 +344,14 @@ public class App
             Population.printReportHeader();
             for (Population.PopulationReportItem item : ((Population) report).get_reportsItems()){
                 System.out.printf(Population.getReportFormat(),item.get_name(),item.get_population(),item.get_popNotInCity(),item.get_popInCity(),item.get_popNotInCityPercentage(),item.get_popinCityyPercentage());
+                System.out.print("\n");
+            }
+        }
+
+        if (report instanceof TotalPopulation){
+            TotalPopulation.printReportHeader();
+            for(TotalPopulation.TotalPopulationReportItem item : ((TotalPopulation) report).get_reportsItems()){
+                System.out.printf(TotalPopulation.getReportFormat(),item.get_name(),item.get_population());
                 System.out.print("\n");
             }
         }
