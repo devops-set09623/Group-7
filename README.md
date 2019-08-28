@@ -37,22 +37,22 @@
 | 18 | All the capital cities in a continent organised by largest population to smallest. | Yes | ![](screenshot/18.PNG) |
 | 19 | All the capital cities in a region organised by largest to smallest. | Yes | ![](screenshot/19.PNG) |
 | 20 | The top N populated capital cities in the world where N is provided by the user. | Yes | ![](screenshot/20.PNG) |
-| 21 | The top N populated capital cities in a continent where N is provided by the user. | Yes | ![](screenshot/city_1.PNG) |
-| 22 | The top N populated capital cities in a region where N is provided by the user. | Yes | ![](screenshot/2.png) |
-| 23 | The population of people, people living in cities, and people not living in cities in each continent. | Yes | ![](screenshot/3.png) |
-| 24 | The population of people, people living in cities, and people not living in cities in each region. | Yes | ![](screenshot/3.png) |
-| 25 | The population of people, people living in cities, and people not living in cities in each country. | Yes | ![](screenshot/3.png) |
-| 26 | The population of the world. | Yes | ![](screenshot/3.png) |
-| 27 | The population of a continent. | Yes | ![](screenshot/3.png) |
-| 28 | The population of a region. | Yes | ![](screenshot/3.png) |
-| 29 | The population of a country. | Yes | ![](screenshot/3.png) |
-| 30 | The population of a district. | Yes | ![](screenshot/city_1.PNG) |
-| 31 | The population of a city. | Yes | ![](screenshot/city_1.PNG) |
-| 32 | the number of people who speak the Chinese languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/2.png) |
-| 33 | the number of people who speak the English languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/3.png) |
-| 34 | the number of people who speak the Hindi languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/3.png) |
-| 35 | the number of people who speak the Spanish languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/3.png) |
-| 36 | the number of people who speak the Arabic languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/3.png) |
+| 21 | The top N populated capital cities in a continent where N is provided by the user. | Yes | ![](screenshot/21.PNG) |
+| 22 | The top N populated capital cities in a region where N is provided by the user. | Yes | ![](screenshot/22.PNG) |
+| 23 | The population of people, people living in cities, and people not living in cities in each continent. | Yes | ![](screenshot/23.PNG) |
+| 24 | The population of people, people living in cities, and people not living in cities in each region. | Yes | ![](screenshot/24.PNG) |
+| 25 | The population of people, people living in cities, and people not living in cities in each country. | Yes | ![](screenshot/25.PNG) |
+| 26 | The population of the world. | Yes | ![](screenshot/26.PNG) |
+| 27 | The population of a continent. | Yes | ![](screenshot/27.PNG) |
+| 28 | The population of a region. | Yes | ![](screenshot/28.PNG) |
+| 29 | The population of a country. | Yes | ![](screenshot/29.PNG) |
+| 30 | The population of a district. | Yes | ![](screenshot/30.PNG) |
+| 31 | The population of a city. | Yes | ![](screenshot/31.PNG) |
+| 32 | the number of people who speak the Chinese languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/32.PNG) |
+| 33 | the number of people who speak the English languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/33.PNG) |
+| 34 | the number of people who speak the Hindi languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/34.PNG) |
+| 35 | the number of people who speak the Spanish languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/35.PNG) |
+| 36 | the number of people who speak the Arabic languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/36.PNG) |
 
 
 
