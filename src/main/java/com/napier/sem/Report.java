@@ -6,7 +6,7 @@ package com.napier.sem;
 abstract public class Report {
 
 
-    public enum ReportType{CountryReport, CityReport, CapitalCityReport, PopulationReport, TotalPopulationReport} //enum for Report type
+
 
     /**
      * Abstract subclass which models a report item
