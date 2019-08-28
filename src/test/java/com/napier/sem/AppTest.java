@@ -51,6 +51,23 @@ public class AppTest
         c.printReportHeader();
     }
 
+    @Test
+    void testprintReportHeaderPopulation(){
+        Population p = new Population();
+        p.printReportHeader();
+    }
+
+    @Test
+    void testprintReportHeaderTotalPopulation(){
+        TotalPopulation tp = new TotalPopulation();
+        tp.printReportHeader();
+    }
+
+
+
+
+
+
 
 
 }
