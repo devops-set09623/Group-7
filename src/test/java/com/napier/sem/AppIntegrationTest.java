@@ -182,4 +182,13 @@ public class AppIntegrationTest {
         CapitalCity.CapitalCityReportItem i = r.get_reportsItems().get(114);
         assertEquals("Macao", i.get_Country());
     }
+
+    @Test
+    void testReportTwentyOne()
+    {
+        CapitalCity r = (CapitalCity) db.getReportTwentyOne("Europe", 10);
+
+        CapitalCity.CapitalCityReportItem i = r.get_reportsItems().get(9);
+        assertEquals("Belarus", i.get_Country());
+    }
 }

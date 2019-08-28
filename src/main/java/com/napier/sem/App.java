@@ -212,6 +212,15 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 21:
+                System.out.println("Enter Continent: ");
+                String cont = sc.nextLine();
+                System.out.println("Enter number: ");
+                numb = sc.nextInt();
+                report = db.getReportTwentyOne(cont, numb);
+                app.printReport(report);
+                break;
+
             default:
                 System.out.println("Not implemented yet");
                 break;
