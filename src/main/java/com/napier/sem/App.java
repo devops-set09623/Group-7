@@ -264,10 +264,58 @@ public class App
                 app.printReport(report);
                 break;
 
+            case 29:
+                System.out.println("Enter Country: ");
+                String cou = sc.nextLine();
+                report = db.getReportTwentyNine(cou);
+                app.printReport(report);
+                break;
+
+
+            case 30:
+                System.out.println("Enter District: ");
+                String dis = sc.nextLine();
+                report = db.getReportThirty(dis);
+                app.printReport(report);
+                break;
+
+            case 31:
+                System.out.println("Enter City: ");
+                String cty = sc.nextLine();
+                report = db.getReportThirtyOne(cty);
+                app.printReport(report);
+                break;
+
+            case 32:
+                report = db.getReportThirtyTwo();
+                app.printReport(report);
+                break;
+
+            case 33:
+                report = db.getReportThirtyThree();
+                app.printReport(report);
+                break;
+
+            case 34:
+                report = db.getReportThirtyFour();
+                app.printReport(report);
+                break;
+
+            case 35:
+                report = db.getReportThirtyFive();
+                app.printReport(report);
+                break;
+
+            case 36:
+                report = db.getReportThirtySix();
+                app.printReport(report);
+                break;
+
+
 
 
             default:
-                System.out.println("Not implemented yet");
+                System.out.println("Out of Range no.");
                 break;
         }
     }
@@ -291,7 +339,6 @@ public class App
                 "All the cities in a country organised by largest population to smallest",
                 "All the cities in a district organised by largest population to smallest.",
                 "The top N populated cities in the world",
-                "The top N populated cities in a continent",
                 "The top N populated cities in a continent",
                 "The top N populated cities in a region",
                 "The top N populated cities in a country",

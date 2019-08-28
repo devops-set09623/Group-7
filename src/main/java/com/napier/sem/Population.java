@@ -6,10 +6,7 @@ public class Population extends Report {
 
     private ArrayList<PopulationReportItem> _reportsItems = new ArrayList<>();
 
-    @Override
-    ReportType getReportType() {
-        return ReportType.PopulationReport;
-    }
+
 
     public ArrayList<PopulationReportItem> get_reportsItems() {
         return _reportsItems;
@@ -48,32 +45,24 @@ public class Population extends Report {
             return _popNotInCity;
         }
 
-        public void set_popNotInCity(long _popNotInCity) {
-            this._popNotInCity = _popNotInCity;
-        }
+
 
         public long get_popInCity() {
             return _popInCity;
         }
 
-        public void set_popInCity(long _popInCity) {
-            this._popInCity = _popInCity;
-        }
+
 
         public double get_popNotInCityPercentage() {
             return _popNotInCityPercentage;
         }
 
-        public void set_popNotInCityPercentage(float _popNotInCityPercentage) {
-            this._popNotInCityPercentage = _popNotInCityPercentage;
-        }
+
 
         public float get_popinCityyPercentage() {
             return _popInCityPercentage;
         }
 
-        public void set_popinCityyPercentage(float _popInCityyPercentage) {
-            this._popInCityPercentage = _popInCityyPercentage;
-        }
+
     }
 }

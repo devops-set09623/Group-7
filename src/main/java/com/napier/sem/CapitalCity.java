@@ -17,10 +17,7 @@ public class CapitalCity extends Report {
         System.out.println("\n");
     }
 
-    @Override
-    ReportType getReportType() {
-        return ReportType.CapitalCityReport;
-    }
+
 
     public void addItemToReport(CapitalCityReportItem item){
         _reportsItems.add(item);
@@ -43,8 +40,6 @@ public class CapitalCity extends Report {
             return _Country;
         }
 
-        public void set_Country(String _Country) {
-            this._Country = _Country;
-        }
+
     }
 }

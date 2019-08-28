@@ -38,10 +38,7 @@ public class Country extends Report {
      * Method to get Report type
      * @return Country Report report type
      */
-    @Override
-    Report.ReportType getReportType() {
-        return ReportType.CountryReport;
-    }
+
 
     /**
      * CountryReportItem class which is a subclass of ReportItem. Used to model a report item

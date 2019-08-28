@@ -3,8 +3,8 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AppIntegrationTest {
 
@@ -257,5 +257,71 @@ public class AppIntegrationTest {
         assertEquals(1507328000, i.get_population());
     }
 
+    @Test
+    void testReportTwentyNine()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportTwentyNine("Myanmar");
 
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(45611000, i.get_population());
+    }
+
+    @Test
+    void testReportThirty()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirty("Scotland");
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(1429620, i.get_population());
+    }
+
+
+    @Test
+    void testReportThirtyOne()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirtyOne("Edinburgh");
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(450180, i.get_population());
+    }
+
+    @Test
+    void testReportThirtyTwo()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirtyTwo();
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertNotNull(i);
+    }
+
+    @Test
+    void testReportThirtyThree()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirtyThree();
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertNotNull(i);
+    }
+
+    @Test
+    void testReportThirtyFour()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirtyFour();
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertNotNull(i);
+    }
+
+    @Test
+    void testReportThirtyFive()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirtyFive();
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertNotNull(i);
+    }
+
+    @Test
+    void testReportThirtySix()
+    {
+        TotalPopulation r =  (TotalPopulation) db.getReportThirtySix();
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertNotNull(i);
+    }
 }

@@ -831,7 +831,7 @@ public class DatabaseHandler {
     protected Report getReportTwentySeven(String continent)  // REPORT 27
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
@@ -861,7 +861,7 @@ public class DatabaseHandler {
     protected Report getReportTwentyEight(String region)  // REPORT 28
     {
         try {
-            Statement stmt = con.createStatement();
+
             String strSelect = "";
             ResultSet rset = null;
 
@@ -887,6 +887,149 @@ public class DatabaseHandler {
         return null;
 
     }
+
+
+    protected Report getReportTwentyNine(String country)  // REPORT 29
+    {
+        try {
+
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "SELECT name, sum(population) AS 'Country Population' FROM country WHERE name = ? group by name;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, country);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
+
+    protected Report getReportThirty(String district)  // REPORT 30
+    {
+        try {
+
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "select district, sum(population) as 'District Population' from city where district = ? group by district;";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, district);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+
+    protected Report getReportThirtyOne(String name)  // REPORT 31
+    {
+        try {
+            String strSelect = "";
+            ResultSet rset = null;
+
+            strSelect = "select name, population from city where name = ?";
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, name);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            // Loop on result set and add report items to report
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+    protected Report getReportThirtyTwo(){
+        return getLanguageReport("chinese");
+    }
+
+    protected Report getReportThirtyThree(){
+        return getLanguageReport("english");
+    }
+
+
+    protected Report getReportThirtyFour(){
+        return getLanguageReport("hindi");
+    }
+
+
+    protected Report getReportThirtyFive(){
+        return getLanguageReport("spanish");
+    }
+
+    protected Report getReportThirtySix(){
+        return getLanguageReport("arabic");
+    }
+
+
+
+
+
+
+
+    protected Report getLanguageReport(String language)  // REPORT 32-36
+    {
+        try {
+            String strSelect = "select language, sum(population) from country join countrylanguage on (code = countrycode) where countrylanguage.language = ?";
+            ResultSet rset = null;
+
+            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
+            preparedStatement.setString(1, language);
+
+            rset = preparedStatement.executeQuery();
+
+            TotalPopulation report = new TotalPopulation();
+
+            while (rset.next()) {
+
+                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                report.addItemToReport(item);
+            }
+            return report;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
 
 
 }
