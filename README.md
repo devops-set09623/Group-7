@@ -7,6 +7,14 @@
 | Product Owner  | Min Hein Htet |
 
 
+# Team Contribution Report 
+|      | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 | Final Deliverable | Average |
+|------|---------------|---------------|---------------|---------------|-------------------|-------|
+| Tin Aung Yin | 0.30 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32|
+| Min Hein Htet | 0.33 | 0.33 | 0.33 | 0.40 | 0.40 | 0.36 |
+| Myat Thu Ta | 0.33 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32 |
+
+
 - Add Build Badge [![Build Status](https://travis-ci.org/devops-set09623/Group-7.svg?branch=master)](https://travis-ci.org/devops-set09623/Group-7)
 - Add License Badge [![LICENSE](https://img.shields.io/github/license/devops-set09623/Group-7.svg?style=flat-square)](https://github.com/devops-set09623/Group-7/blob/master/LICENSE)
 - Develop Build Status [![Build Status](https://travis-ci.org/devops-set09623/Group-7.svg?branch=develop)](https://travis-ci.org/devops-set09623/Group-7)
@@ -53,13 +61,3 @@
 | 34 | the number of people who speak the Hindi languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/34.PNG) |
 | 35 | the number of people who speak the Spanish languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/35.PNG) |
 | 36 | the number of people who speak the Arabic languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/36.PNG) |
-
-
-
-
-# Team Contribution Report 
-|      | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 | Final Deliverable | Average |
-|------|---------------|---------------|---------------|---------------|-------------------|-------|
-| Tin Aung Yin | 0.30 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32|
-| Min Hein Htet | 0.33 | 0.33 | 0.33 | 0.40 | 0.40 | 0.36 |
-| Myat Thu Ta | 0.33 | 0.33 | 0.33 | 0.30 | 0.30 | 0.32 |
