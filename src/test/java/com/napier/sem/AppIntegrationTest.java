@@ -265,4 +265,13 @@ public class AppIntegrationTest {
         TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
         assertEquals(45611000, i.get_population());
     }
+
+    @Test
+    void testReportThirty()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportThirty("Scotland");
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(1429620, i.get_population());
+    }
 }
