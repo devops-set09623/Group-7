@@ -248,4 +248,14 @@ public class AppIntegrationTest {
     }
 
 
+    @Test
+    void testReportTwentyEight()
+    {
+        TotalPopulation r = (TotalPopulation) db.getReportTwentyEight("Eastern Asia");
+
+        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
+        assertEquals(1507328000, i.get_population());
+    }
+
+
 }
