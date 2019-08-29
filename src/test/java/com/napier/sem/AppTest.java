@@ -66,8 +66,13 @@ public class AppTest
         tp.printReportHeader();
     }
 
+    @Test
+    void testget_popNotInCity(){
+        Population population = new Population();
+        //Population.PopulationReportItem item =  new Population().new PopulationReportItem("Myanmar",122222, 3333333,0.2,3344444,3.55);
 
 
+    }
 
 
 
