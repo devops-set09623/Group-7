@@ -800,7 +800,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "Select country.continent, SUM(country.population) as regionPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.continent;";
+            strSelect = "Select country.continent, SUM(country.population) as TotalPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.continent;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
@@ -830,7 +830,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "Select country.region, SUM(country.population) as regionPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.region;";
+            strSelect = "Select country.region, SUM(country.population) as TotalPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.region;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
@@ -860,7 +860,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "select country.name, country.population, country.population-sum(city.population) as 'pop not in city', ((country.population-sum(city.population))/country.population)*100 as '%', country.population - (country.population-sum(city.population)) as 'pop in city', ((country.population - (country.population-sum(city.population)))/country.population)*100 as '%' from country country join city city on country.code = city.countrycode where city.countrycode = country.code GROUP BY country.name, country.population ORDER BY country.name;";
+            strSelect = "select country.name, country.population, country.population-sum(city.population) as 'pop not in city', ((country.population-sum(city.population))/country.population)*100 as 'PopnotinCity%', country.population - (country.population-sum(city.population)) as 'pop in city', ((country.population - (country.population-sum(city.population)))/country.population)*100 as 'PopInCity%' from country country join city city on country.code = city.countrycode where city.countrycode = country.code GROUP BY country.name, country.population ORDER BY country.name;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
