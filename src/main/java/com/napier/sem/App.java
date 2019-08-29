@@ -4,7 +4,9 @@ package com.napier.sem;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-
+/**
+ * Declaring public class for App
+ */
 public class App
 {
 
@@ -63,6 +65,9 @@ public class App
         return 0;
     }
 
+    /**
+     *Declaring private class callReport
+     */
     private void callReport(int num) {
 
         Scanner sc = new Scanner(System.in);
