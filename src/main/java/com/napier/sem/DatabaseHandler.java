@@ -526,7 +526,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Fifteen to produce the report of top N populated cities in a country
+     * N is provided by user
+     */
     protected Report getReportFifteen(int num, String country)  // REPORT 15
     {
         try
@@ -561,7 +564,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report sixteen to produce the report of top N populated cities in the district
+     * N is provided by user
+     */
     protected Report getReportSixteen(int num, String district)  // REPORT 16
     {
         try
@@ -596,7 +602,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Seven to produce the report of all the capital cities in the world
+     * Organized by largest population to smallest
+     */
     protected Report getReportSeventeen() {
 
         // REPORT 17
@@ -623,7 +632,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Eighteen to produce the report of all the capital cities in a continent
+     * Organized by largest population to smallest
+     */
     protected Report getReportEighteen( String continent)  // REPORT 18
     {
         try {
