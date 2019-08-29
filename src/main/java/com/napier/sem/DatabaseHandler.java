@@ -789,7 +789,10 @@ public class DatabaseHandler {
         }
         return null;
     }
-
+    /**
+     * This is the method for Report TwentyThree to produce the report of the population of people, people living in cities and people not living in cities
+     * in each continent
+     */
     protected Report getReportTwentyThree()  // REPORT 23
     {
         try {
@@ -816,6 +819,10 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Twentyfour to produce the report of the population of people, people living in cities and people not living in cities
+     * in each region
+     */
     protected Report getReportTwentyFour()  // REPORT 24
     {
         try {
@@ -842,6 +849,10 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Twentyfive to produce the report of the population of people, people living in cities and people not living in cities
+     * in each country
+     */
     protected Report getReportTwentyFive()  // REPORT 25
     {
         try {
@@ -868,7 +879,9 @@ public class DatabaseHandler {
 
     }
 
-
+    /**
+     * This is the method for Report TwentySix to produce the report of the population of the world.
+     */
     protected Report getReportTwentySix()  // REPORT 26
     {
         try {
@@ -895,6 +908,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report TwentySeven to produce the report of the population of the continent.
+     */
     protected Report getReportTwentySeven(String continent)  // REPORT 27
     {
         try {
