@@ -83,7 +83,7 @@ public class DatabaseHandler {
     }
 
     /**
-     * This is the function for Report One to produce the report of all countries in the world organized by
+     * This is the method for Report One to produce the report of all countries in the world organized by
      * largest population to the smallest.
      */
     protected Report getReportOne() {
@@ -113,7 +113,7 @@ public class DatabaseHandler {
     }
 
     /**
-     * This is the function for Report Two to produce the report of all countries in the continent organized by
+     * This is the method for Report Two to produce the report of all countries in the continent organized by
      * largest population to the smallest.
      */
     protected Report getReportTwo(String continent){
@@ -144,7 +144,7 @@ public class DatabaseHandler {
 
 
     /**
-     * This is the function for Report Three to produce the report of all countries in the region organized by
+     * This is the method for Report Three to produce the report of all countries in the region organized by
      * largest population to the smallest.
      */
     protected Report getReportThree(String region){
@@ -173,7 +173,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Four to produce the top N populated countries in the world
+     * N is provided by the User
+     */
     protected Report getReportFour(int num) {
         // REPORT 4
 
@@ -200,7 +203,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report five to produce the top N populated countries in the continent
+     * N is provided by the User
+     */
     protected Report getReportFive(String continent, int num) {
         // REPORT 5
 
@@ -228,7 +234,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Six to produce the top N populated countries in the region
+     * N is provided by the User
+     */
     protected Report getReportSix(String region, int num) {
         // REPORT 6
 
@@ -256,7 +265,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Seven to produce all the cities in the world
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportSeven() {
 
         // REPORT 7
