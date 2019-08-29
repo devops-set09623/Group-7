@@ -82,8 +82,10 @@ public class DatabaseHandler {
         }
     }
 
-
-
+    /**
+     * This is the function for Report One to produce the report of all countries in the world organized by
+     * largest population to the smallest.
+     */
     protected Report getReportOne() {
 
         // REPORT 1
@@ -110,6 +112,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the function for Report Two to produce the report of all countries in the continent organized by
+     * largest population to the smallest.
+     */
     protected Report getReportTwo(String continent){
         //REPORT 2
         try {
@@ -137,7 +143,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the function for Report Three to produce the report of all countries in the region organized by
+     * largest population to the smallest.
+     */
     protected Report getReportThree(String region){
         //REPORT 3
         try {

@@ -16,7 +16,7 @@ public class AppIntegrationTest {
     {
         app = new App();
         db = DatabaseHandler.Instance();
-        db.connect("localhost:33060");
+        db.connect("localhost:33060"); //in local, can run with 3306 but for the travis, run with 33060 for some reasons.
     }
 
 
