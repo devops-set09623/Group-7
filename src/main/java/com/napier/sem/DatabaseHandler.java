@@ -603,7 +603,7 @@ public class DatabaseHandler {
     }
 
     /**
-     * This is the method for Report Seven to produce the report of all the capital cities in the world
+     * This is the method for Report Seventeen to produce the report of all the capital cities in the world
      * Organized by largest population to smallest
      */
     protected Report getReportSeventeen() {
@@ -664,6 +664,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Nineteen to produce the report of all the capital cities in a region
+     * Organized by largest population to smallest
+     */
     protected Report getReportNineteen (String region) // REPORT 19
     {
         try {
@@ -690,6 +694,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Twenty to produce the report of the top N populated capital cities in the world
+     * N is provided by User
+     */
     protected Report getReportTwenty(int number) //REPORT 20
     {
         try {
@@ -718,7 +726,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report TwentyOne to produce the report of the top N populated capital cities in a continent
+     * N is provided by User
+     */
     protected Report getReportTwentyOne (String continent, int number) // REPORT 21
     {
         try {
@@ -747,6 +758,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report TwentyTwo to produce the report of the top N populated capital cities in a region
+     * N is provided by User
+     */
     protected Report getReportTwentyTwo (String region, int number) // REPORT 22
     {
         try {
@@ -774,7 +789,6 @@ public class DatabaseHandler {
         }
         return null;
     }
-
 
     protected Report getReportTwentyThree()  // REPORT 23
     {
