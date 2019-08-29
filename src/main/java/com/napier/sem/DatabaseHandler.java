@@ -295,6 +295,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Eight to produce all the cities in the continent
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportEight(String continent) {
         // REPORT 8
         try {
@@ -320,7 +324,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Nine to produce all the cities in the region
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportNine(String region) {
 
         // REPORT 9
@@ -347,7 +354,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Ten to produce all the cities in the country
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportTen(String country) {
 
         // REPORT 10
@@ -375,7 +385,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Eleven to produce all the cities in the district
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportEleven(String district) {
 
         // REPORT 11
@@ -401,7 +414,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Twelve to produce the report of top N populated cities in the world
+     * N is provided by user
+     */
     protected Report getReportTwelve(int num)  // REPORT 12
     {
         try {
@@ -435,7 +451,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Thirteen to produce the report of top N populated cities in a continent
+     * N is provided by user
+     */
     protected Report getReportThirteen(int num, String continent)  // REPORT 13
     {
         try {
@@ -469,7 +488,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Fourteen to produce the report of top N populated cities in a region
+     * N is provided by user
+     */
     protected Report getReportFourteen(int num, String region)  // REPORT 14
     {
         try
