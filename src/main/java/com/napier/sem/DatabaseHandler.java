@@ -275,10 +275,8 @@ public class DatabaseHandler {
     }
 
     protected Report getReportEight(String continent) {
-
         // REPORT 8
         try {
-
             ResultSet rset = null;
             String select = "select city.name, country.name, city.district, city.population from city city join country country on CountryCode=code where country.continent = ? order by city.population DESC;";
 
