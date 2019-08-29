@@ -909,7 +909,7 @@ public class DatabaseHandler {
     }
 
     /**
-     * This is the method for Report TwentySeven to produce the report of the population of the continent.
+     * This is the method for Report TwentySeven to produce the report of the population of a continent.
      */
     protected Report getReportTwentySeven(String continent)  // REPORT 27
     {
@@ -941,6 +941,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report TwentyEight to produce the report of the population of a region.
+     */
     protected Report getReportTwentyEight(String region)  // REPORT 28
     {
         try {
@@ -971,7 +974,9 @@ public class DatabaseHandler {
 
     }
 
-
+    /**
+     * This is the method for Report TwentyNine to produce the report of the population of a country.
+     */
     protected Report getReportTwentyNine(String country)  // REPORT 29
     {
         try {
@@ -1002,6 +1007,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Thirty to produce the report of the population of a district.
+     */
     protected Report getReportThirty(String district)  // REPORT 30
     {
         try {
@@ -1031,7 +1039,9 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report ThirtyOne to produce the report of the population of a city.
+     */
     protected Report getReportThirtyOne(String name)  // REPORT 31
     {
         try {
@@ -1060,6 +1070,7 @@ public class DatabaseHandler {
         return null;
     }
 
+
     protected Report getReportThirtyTwo(){
         return getLanguageReport("chinese");
     }
@@ -1087,7 +1098,9 @@ public class DatabaseHandler {
 
 
 
-
+    /**
+     * This is the method to produce the report of Language.
+     */
     protected Report getLanguageReport(String language)  // REPORT 32-36
     {
         try {
