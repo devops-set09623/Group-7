@@ -3,11 +3,7 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Base64;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AppTest
 {
@@ -68,8 +64,13 @@ public class AppTest
 
     @Test
     void testget_popNotInCity(){
-        Population population = new Population();
-        //Population.PopulationReportItem item =  new Population().new PopulationReportItem("Myanmar",122222, 3333333,0.2,3344444,3.55);
+
+        Population.PopulationReportItem item =  new Population().new PopulationReportItem("Myanmar",122222, 3333333,34.834999084472656f,3344444,65.165f );
+
+        assertEquals(3333333,item.get_popNotInCity());
+        assertEquals(3344444,item.get_popInCity());
+        assertEquals(34.834999084472656f,item.get_popNotInCityPercentage());
+        assertEquals(65.165f,item.get_popinCityyPercentage());
 
 
     }
