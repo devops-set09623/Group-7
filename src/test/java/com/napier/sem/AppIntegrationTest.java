@@ -3,8 +3,8 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppIntegrationTest {
 
@@ -283,6 +283,13 @@ public class AppIntegrationTest {
 
         TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
         assertEquals(450180, i.get_population());
+    }
+
+    @Test
+    void testLanguageReport(){
+        Language r = (Language) db.getLanguageReport();
+        Language.LanguageReportItem i = r.get_reportsItems().get(0);
+        assertEquals(119184353922L, i.get_SpeakerPop());
     }
 
 
