@@ -55,12 +55,18 @@ public class Language extends Report {
             this._worldPercentage=worldPercentage;
         }
 
+        /**
+         * method to return speaker population
+         * @return returns population of speaker
+         */
         public long get_SpeakerPop() {
             return _SpeakerPop;
         }
 
-
-
+        /**
+         * method to return world percentage of speaker
+         * @return returns Speaker population in percentage
+         */
         public float get_worldPercentage() {
             return _worldPercentage;
         }
