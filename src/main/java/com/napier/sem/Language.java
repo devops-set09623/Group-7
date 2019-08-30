@@ -27,13 +27,18 @@ public class Language extends Report {
         return "%-35s  %-20s  %-20s";
     }
 
+    /**
+     * Prints Language Report Header
+     */
     public static void printReportHeader(){
         System.out.println("\n");
         System.out.printf(Language.getReportFormat(), "Name", "SpeakerPop", "worldpercent");
         System.out.println("\n");
     }
 
-
+    /**
+     * LanguageReportItem class which is a subclass of ReportItem. Used to model a report item
+     */
     class LanguageReportItem extends ReportItem {
         private long _SpeakerPop;
         private float _worldPercentage;
