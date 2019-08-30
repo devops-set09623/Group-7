@@ -68,14 +68,7 @@ public class AppTest
         l.printReportHeader();
     }
 
-    @Test
-    void test_getLanguageItems(){
-        Language.LanguageReportItem item = new Language().new LanguageReportItem("Chinese", 11212,22.4f);
 
-        assertEquals("Chinese",item.get_name());
-        assertEquals(11212,item.get_SpeakerPop());
-        assertEquals(22.4f,item.get_worldPercentage());
-    }
 
     @Test
     void testget_popNotInCity(){
