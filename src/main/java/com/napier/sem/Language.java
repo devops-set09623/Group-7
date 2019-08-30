@@ -2,6 +2,9 @@ package com.napier.sem;
 
 import java.util.ArrayList;
 
+/**
+ * Purpose of class: Class for a Country Report which inherits from Report
+ */
 public class Language extends Report {
 
     private ArrayList<LanguageReportItem> _reportsItems = new ArrayList<>();
