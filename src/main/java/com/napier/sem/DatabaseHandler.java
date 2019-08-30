@@ -4,6 +4,8 @@ package com.napier.sem;
 
 import java.sql.*;
 
+import static com.mysql.cj.x.protobuf.MysqlxCrud.Order.Direction.DESC;
+
 public class DatabaseHandler {
 
     /**
@@ -82,8 +84,10 @@ public class DatabaseHandler {
         }
     }
 
-
-
+    /**
+     * This is the method for Report One to produce the report of all countries in the world organized by
+     * largest population to the smallest.
+     */
     protected Report getReportOne() {
 
         // REPORT 1
@@ -110,6 +114,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Two to produce the report of all countries in the continent organized by
+     * largest population to the smallest.
+     */
     protected Report getReportTwo(String continent){
         //REPORT 2
         try {
@@ -137,7 +145,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Three to produce the report of all countries in the region organized by
+     * largest population to the smallest.
+     */
     protected Report getReportThree(String region){
         //REPORT 3
         try {
@@ -164,7 +175,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Four to produce the top N populated countries in the world
+     * N is provided by the User
+     */
     protected Report getReportFour(int num) {
         // REPORT 4
 
@@ -191,7 +205,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report five to produce the top N populated countries in the continent
+     * N is provided by the User
+     */
     protected Report getReportFive(String continent, int num) {
         // REPORT 5
 
@@ -219,7 +236,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Six to produce the top N populated countries in the region
+     * N is provided by the User
+     */
     protected Report getReportSix(String region, int num) {
         // REPORT 6
 
@@ -247,7 +267,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Seven to produce all the cities in the world
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportSeven() {
 
         // REPORT 7
@@ -274,6 +297,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Eight to produce all the cities in the continent
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportEight(String continent) {
         // REPORT 8
         try {
@@ -299,7 +326,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Nine to produce all the cities in the region
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportNine(String region) {
 
         // REPORT 9
@@ -326,7 +356,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Ten to produce all the cities in the country
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportTen(String country) {
 
         // REPORT 10
@@ -354,7 +387,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Eleven to produce all the cities in the district
+     * Organized by the largest population to the smallest
+     */
     protected Report getReportEleven(String district) {
 
         // REPORT 11
@@ -380,7 +416,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Twelve to produce the report of top N populated cities in the world
+     * N is provided by user
+     */
     protected Report getReportTwelve(int num)  // REPORT 12
     {
         try {
@@ -414,7 +453,10 @@ public class DatabaseHandler {
     }
 
 
-
+    /**
+     * This is the method for Report Thirteen to produce the report of top N populated cities in a continent
+     * N is provided by user
+     */
     protected Report getReportThirteen(int num, String continent)  // REPORT 13
     {
         try {
@@ -448,7 +490,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Fourteen to produce the report of top N populated cities in a region
+     * N is provided by user
+     */
     protected Report getReportFourteen(int num, String region)  // REPORT 14
     {
         try
@@ -483,7 +528,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Fifteen to produce the report of top N populated cities in a country
+     * N is provided by user
+     */
     protected Report getReportFifteen(int num, String country)  // REPORT 15
     {
         try
@@ -518,7 +566,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report sixteen to produce the report of top N populated cities in the district
+     * N is provided by user
+     */
     protected Report getReportSixteen(int num, String district)  // REPORT 16
     {
         try
@@ -553,7 +604,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Seventeen to produce the report of all the capital cities in the world
+     * Organized by largest population to smallest
+     */
     protected Report getReportSeventeen() {
 
         // REPORT 17
@@ -580,7 +634,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report Eighteen to produce the report of all the capital cities in a continent
+     * Organized by largest population to smallest
+     */
     protected Report getReportEighteen( String continent)  // REPORT 18
     {
         try {
@@ -609,6 +666,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Nineteen to produce the report of all the capital cities in a region
+     * Organized by largest population to smallest
+     */
     protected Report getReportNineteen (String region) // REPORT 19
     {
         try {
@@ -635,6 +696,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report Twenty to produce the report of the top N populated capital cities in the world
+     * N is provided by User
+     */
     protected Report getReportTwenty(int number) //REPORT 20
     {
         try {
@@ -663,7 +728,10 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report TwentyOne to produce the report of the top N populated capital cities in a continent
+     * N is provided by User
+     */
     protected Report getReportTwentyOne (String continent, int number) // REPORT 21
     {
         try {
@@ -692,6 +760,10 @@ public class DatabaseHandler {
         return null;
     }
 
+    /**
+     * This is the method for Report TwentyTwo to produce the report of the top N populated capital cities in a region
+     * N is provided by User
+     */
     protected Report getReportTwentyTwo (String region, int number) // REPORT 22
     {
         try {
@@ -719,8 +791,10 @@ public class DatabaseHandler {
         }
         return null;
     }
-
-
+    /**
+     * This is the method for Report TwentyThree to produce the report of the population of people, people living in cities and people not living in cities
+     * in each continent
+     */
     protected Report getReportTwentyThree()  // REPORT 23
     {
         try {
@@ -728,7 +802,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "Select country.continent, SUM(country.population) as regionPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.continent;";
+            strSelect = "Select country.continent, SUM(country.population) as TotalPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.continent;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
@@ -747,6 +821,10 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Twentyfour to produce the report of the population of people, people living in cities and people not living in cities
+     * in each region
+     */
     protected Report getReportTwentyFour()  // REPORT 24
     {
         try {
@@ -754,7 +832,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "Select country.region, SUM(country.population) as regionPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.region;";
+            strSelect = "Select country.region, SUM(country.population) as TotalPopulation, SUM((select SUM(population) from city where countrycode = country.code)) AS popInCity, (SUM((select SUM(population) from city where countrycode = country.code)) / SUM(country.population))*100 as percentInCities , (sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) as popNotInCity, ((sum(country.population)-SUM((select SUM(population) from city where countrycode = country.code))) / SUM(country.population))*100 as percentNotInCities from country GROUP BY country.region;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
@@ -773,6 +851,10 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Twentyfive to produce the report of the population of people, people living in cities and people not living in cities
+     * in each country
+     */
     protected Report getReportTwentyFive()  // REPORT 25
     {
         try {
@@ -780,7 +862,7 @@ public class DatabaseHandler {
             String strSelect = "";
             ResultSet rset = null;
 
-            strSelect = "select country.name, country.population, country.population-sum(city.population) as 'pop not in city', ((country.population-sum(city.population))/country.population)*100 as '%', country.population - (country.population-sum(city.population)) as 'pop in city', ((country.population - (country.population-sum(city.population)))/country.population)*100 as '%' from country country join city city on country.code = city.countrycode where city.countrycode = country.code GROUP BY country.name, country.population ORDER BY country.name;";
+            strSelect = "select country.name, country.population, country.population-sum(city.population) as 'pop not in city', ((country.population-sum(city.population))/country.population)*100 as 'PopnotinCity%', country.population - (country.population-sum(city.population)) as 'pop in city', ((country.population - (country.population-sum(city.population)))/country.population)*100 as 'PopInCity%' from country country join city city on country.code = city.countrycode where city.countrycode = country.code GROUP BY country.name, country.population ORDER BY country.name;";
             rset = stmt.executeQuery(strSelect);
 
             Population report = new Population();
@@ -799,7 +881,9 @@ public class DatabaseHandler {
 
     }
 
-
+    /**
+     * This is the method for Report TwentySix to produce the report of the population of the world.
+     */
     protected Report getReportTwentySix()  // REPORT 26
     {
         try {
@@ -826,6 +910,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report TwentySeven to produce the report of the population of a continent.
+     */
     protected Report getReportTwentySeven(String continent)  // REPORT 27
     {
         try {
@@ -856,6 +943,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report TwentyEight to produce the report of the population of a region.
+     */
     protected Report getReportTwentyEight(String region)  // REPORT 28
     {
         try {
@@ -886,7 +976,9 @@ public class DatabaseHandler {
 
     }
 
-
+    /**
+     * This is the method for Report TwentyNine to produce the report of the population of a country.
+     */
     protected Report getReportTwentyNine(String country)  // REPORT 29
     {
         try {
@@ -917,6 +1009,9 @@ public class DatabaseHandler {
 
     }
 
+    /**
+     * This is the method for Report Thirty to produce the report of the population of a district.
+     */
     protected Report getReportThirty(String district)  // REPORT 30
     {
         try {
@@ -946,7 +1041,9 @@ public class DatabaseHandler {
         return null;
     }
 
-
+    /**
+     * This is the method for Report ThirtyOne to produce the report of the population of a city.
+     */
     protected Report getReportThirtyOne(String name)  // REPORT 31
     {
         try {
@@ -975,50 +1072,28 @@ public class DatabaseHandler {
         return null;
     }
 
-    protected Report getReportThirtyTwo(){
-        return getLanguageReport("chinese");
-    }
-
-    protected Report getReportThirtyThree(){
-        return getLanguageReport("english");
-    }
-
-
-    protected Report getReportThirtyFour(){
-        return getLanguageReport("hindi");
-    }
-
-
-    protected Report getReportThirtyFive(){
-        return getLanguageReport("spanish");
-    }
-
-    protected Report getReportThirtySix(){
-        return getLanguageReport("arabic");
-    }
 
 
 
 
-
-
-
-    protected Report getLanguageReport(String language)  // REPORT 32-36
+    /**
+     * This is the method to produce the report of Language.
+     */
+    protected Report getLanguageReport()  // REPORT 32-36
     {
         try {
-            String strSelect = "select language, sum(population) from country join countrylanguage on (code = countrycode) where countrylanguage.language = ?";
+            Statement stmt = con.createStatement();
+            String strSelect = "";
             ResultSet rset = null;
+            strSelect = "select cl.language, sum(cl.percentage*c.population) as speakerlangugaepop, sum(c.population*cl.percentage)/(select sum(population) from country) as worldpercentage from countrylanguage cl, country c where cl.countrycode=c.code and cl.language in ('English','Arabic','Hindi','Chinese','Spanish') group by cl.language order by worldpercentage DESC;";
 
-            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
-            preparedStatement.setString(1, language);
+            rset = stmt.executeQuery(strSelect);
 
-            rset = preparedStatement.executeQuery();
-
-            TotalPopulation report = new TotalPopulation();
+            Language report = new Language();
 
             while (rset.next()) {
 
-                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                Language.LanguageReportItem item = report.new LanguageReportItem(rset.getString(1), rset.getLong(2),rset.getFloat(3));
                 report.addItemToReport(item);
             }
             return report;

@@ -4,7 +4,9 @@ package com.napier.sem;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-
+/**
+ * Declaring public class for App
+ */
 public class App
 {
 
@@ -63,6 +65,9 @@ public class App
         return 0;
     }
 
+    /**
+     *Declaring private class callReport
+     */
     private void callReport(int num) {
 
         Scanner sc = new Scanner(System.in);
@@ -287,32 +292,9 @@ public class App
                 break;
 
             case 32:
-                report = db.getReportThirtyTwo();
+                report = db.getLanguageReport();
                 app.printReport(report);
                 break;
-
-            case 33:
-                report = db.getReportThirtyThree();
-                app.printReport(report);
-                break;
-
-            case 34:
-                report = db.getReportThirtyFour();
-                app.printReport(report);
-                break;
-
-            case 35:
-                report = db.getReportThirtyFive();
-                app.printReport(report);
-                break;
-
-            case 36:
-                report = db.getReportThirtySix();
-                app.printReport(report);
-                break;
-
-
-
 
             default:
                 System.out.println("Out of Range no.");
@@ -413,6 +395,14 @@ public class App
             TotalPopulation.printReportHeader();
             for(TotalPopulation.TotalPopulationReportItem item : ((TotalPopulation) report).get_reportsItems()){
                 System.out.printf(TotalPopulation.getReportFormat(),item.get_name(),item.get_population());
+                System.out.print("\n");
+            }
+        }
+
+        if (report instanceof Language){
+            Language.printReportHeader();
+            for (Language.LanguageReportItem item : ((Language) report).get_reportsItems()){
+                System.out.printf(Language.getReportFormat(),item.get_name(),item.get_SpeakerPop(),item.get_worldPercentage());
                 System.out.print("\n");
             }
         }

@@ -1,2 +1,3 @@
 ignore:
-  - "src/main/java/com/napier/sem/App.java"
+  - "src/main/java/com/napier/sem/App.java" #cannot be added as a unit test because main function included in App.java
+  - "src/main/java/com/napier/sem/DatabaseHandler.java" #to ignore the test because try and catch cannot be added as a unit test.

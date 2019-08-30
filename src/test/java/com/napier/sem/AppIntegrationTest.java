@@ -3,8 +3,8 @@ package com.napier.sem;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AppIntegrationTest {
 
@@ -16,7 +16,7 @@ public class AppIntegrationTest {
     {
         app = new App();
         db = DatabaseHandler.Instance();
-        db.connect("localhost:33060");
+        db.connect("localhost:33060"); //in local, can run with 3306 but for the travis, run with 33060 for some reasons.
     }
 
 
@@ -286,42 +286,11 @@ public class AppIntegrationTest {
     }
 
     @Test
-    void testReportThirtyTwo()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyTwo();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
+    void testLanguageReport(){
+        Language r = (Language) db.getLanguageReport();
+        Language.LanguageReportItem i = r.get_reportsItems().get(0);
+        assertEquals(119184353922L, i.get_SpeakerPop());
     }
 
-    @Test
-    void testReportThirtyThree()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyThree();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
 
-    @Test
-    void testReportThirtyFour()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyFour();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
-
-    @Test
-    void testReportThirtyFive()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyFive();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
-
-    @Test
-    void testReportThirtySix()
-    {
-        TotalPopulation r =  (TotalPopulation) db.getReportThirtySix();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
 }
