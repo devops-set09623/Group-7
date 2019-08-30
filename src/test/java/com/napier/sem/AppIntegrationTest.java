@@ -285,43 +285,5 @@ public class AppIntegrationTest {
         assertEquals(450180, i.get_population());
     }
 
-    @Test
-    void testReportThirtyTwo()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyTwo();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
 
-    @Test
-    void testReportThirtyThree()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyThree();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
-
-    @Test
-    void testReportThirtyFour()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyFour();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
-
-    @Test
-    void testReportThirtyFive()
-    {
-        TotalPopulation r = (TotalPopulation) db.getReportThirtyFive();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
-
-    @Test
-    void testReportThirtySix()
-    {
-        TotalPopulation r =  (TotalPopulation) db.getReportThirtySix();
-        TotalPopulation.TotalPopulationReportItem i = r.get_reportsItems().get(0);
-        assertNotNull(i);
-    }
 }

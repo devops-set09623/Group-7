@@ -4,6 +4,8 @@ package com.napier.sem;
 
 import java.sql.*;
 
+import static com.mysql.cj.x.protobuf.MysqlxCrud.Order.Direction.DESC;
+
 public class DatabaseHandler {
 
     /**
@@ -1071,52 +1073,27 @@ public class DatabaseHandler {
     }
 
 
-    protected Report getReportThirtyTwo(){
-        return getLanguageReport("chinese");
-    }
-
-    protected Report getReportThirtyThree(){
-        return getLanguageReport("english");
-    }
-
-
-    protected Report getReportThirtyFour(){
-        return getLanguageReport("hindi");
-    }
-
-
-    protected Report getReportThirtyFive(){
-        return getLanguageReport("spanish");
-    }
-
-    protected Report getReportThirtySix(){
-        return getLanguageReport("arabic");
-    }
-
-
-
 
 
 
     /**
      * This is the method to produce the report of Language.
      */
-    protected Report getLanguageReport(String language)  // REPORT 32-36
+    protected Report getLanguageReport()  // REPORT 32-36
     {
         try {
-            String strSelect = "select language, sum(population) from country join countrylanguage on (code = countrycode) where countrylanguage.language = ?";
+            Statement stmt = con.createStatement();
+            String strSelect = "";
             ResultSet rset = null;
+            strSelect = "select cl.language, sum(cl.percentage*c.population) as speakerlangugaepop, sum(c.population*cl.percentage)/(select sum(population) from country) as worldpercentage from countrylanguage cl, country c where cl.countrycode=c.code and cl.language in ('English','Arabic','Hindi','Chinese','Spanish') group by cl.language order by worldpercentage DESC;";
 
-            PreparedStatement preparedStatement = con.prepareStatement(strSelect);
-            preparedStatement.setString(1, language);
+            rset = stmt.executeQuery(strSelect);
 
-            rset = preparedStatement.executeQuery();
-
-            TotalPopulation report = new TotalPopulation();
+            Language report = new Language();
 
             while (rset.next()) {
 
-                TotalPopulation.TotalPopulationReportItem item = report.new TotalPopulationReportItem(rset.getString(1), rset.getLong(2));
+                Language.LanguageReportItem item = report.new LanguageReportItem(rset.getString(1), rset.getLong(2),rset.getFloat(3));
                 report.addItemToReport(item);
             }
             return report;
