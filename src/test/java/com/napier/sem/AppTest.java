@@ -63,6 +63,21 @@ public class AppTest
     }
 
     @Test
+    void testprintReportHeaderLanguage(){
+        Language l = new Language();
+        l.printReportHeader();
+    }
+
+    @Test
+    void test_getLanguageItems(){
+        Language.LanguageReportItem item = new Language().new LanguageReportItem("Chinese", 11212,22.4f);
+
+        assertEquals("Chinese",item.get_name());
+        assertEquals(11212,item.get_SpeakerPop());
+        assertEquals(22.4f,item.get_worldPercentage());
+    }
+
+    @Test
     void testget_popNotInCity(){
 
         Population.PopulationReportItem item =  new Population().new PopulationReportItem("Myanmar",122222, 3333333,34.834999084472656f,3344444,65.165f );
