@@ -6,8 +6,6 @@ package com.napier.sem;
 abstract public class Report {
 
 
-
-
     /**
      * Abstract subclass which models a report item
      */
