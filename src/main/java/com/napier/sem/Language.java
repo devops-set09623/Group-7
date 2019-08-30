@@ -3,7 +3,7 @@ package com.napier.sem;
 import java.util.ArrayList;
 
 /**
- * Purpose of class: Class for a Country Report which inherits from Report
+ * Purpose of class: Class for a Language Report which inherits from Report
  */
 public class Language extends Report {
 
@@ -18,6 +18,11 @@ public class Language extends Report {
     public void addItemToReport(LanguageReportItem item){
         _reportsItems.add(item);
     }
+
+    /**
+     * Method to return string for report format
+     * @return string format from LanguageReport
+     */
     public static String getReportFormat() {
         return "%-35s  %-20s  %-20s";
     }
