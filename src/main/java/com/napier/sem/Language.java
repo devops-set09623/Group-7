@@ -32,7 +32,7 @@ public class Language extends Report {
      */
     public static void printReportHeader(){
         System.out.println("\n");
-        System.out.printf(Language.getReportFormat(), "Name", "SpeakerPop", "worldpercent");
+        System.out.printf(Language.getReportFormat(), "Language Name", "SpeakerPop", "worldpercent");
         System.out.println("\n");
     }
 
