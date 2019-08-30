@@ -43,7 +43,12 @@ public class Language extends Report {
         private long _SpeakerPop;
         private float _worldPercentage;
 
-
+        /**
+         * Public constructor which takes in a series of arguments
+         * @param name Language name
+         * @param speakerPop Speaker Population
+         * @param worldPercentage World percentage of speaker population
+         */
         public LanguageReportItem(String name, long speakerPop, float worldPercentage) {
             this.set_name(name);
             this._SpeakerPop=speakerPop;
