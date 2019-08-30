@@ -21,7 +21,7 @@ public class Population extends Report {
 
     public static void printReportHeader(){
         System.out.println("\n");
-        System.out.printf(Population.getReportFormat(), "Name", "Population", "PopulationNotInCity", "PopulationInCity", "PopInCityPercentage", "PopNotInCityPercentage");
+        System.out.printf(Population.getReportFormat(), "Name", "Population", "PopulationInCity", "PopulationNotInCity", "PopInCityPercentage", "PopNotInCityPercentage");
         System.out.println("\n");
     }
 
