@@ -19,7 +19,7 @@ public class Country extends Report {
 
     /**
      * Method to return string for report format
-     * @return string forma for Country
+     * @return string format for Country
      */
     public static String getReportFormat() {
         return "%-5s  %-40s  %-30.25s  %-30s  %-20s  %-20s";
@@ -34,10 +34,6 @@ public class Country extends Report {
         System.out.println("\n");
     }
 
-    /**
-     * Method to get Report type
-     * @return Country Report report type
-     */
 
 
     /**
