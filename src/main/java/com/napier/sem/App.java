@@ -299,6 +299,7 @@ public class App
                 break;
 
             case 29:
+                System.out.println("The population of a country");
                 System.out.println("Enter Country: ");
                 String cou = sc.nextLine();
                 report = db.getReportTwentyNine(cou);
@@ -307,6 +308,7 @@ public class App
 
 
             case 30:
+                System.out.println("The population of a district");
                 System.out.println("Enter District: ");
                 String dis = sc.nextLine();
                 report = db.getReportThirty(dis);
@@ -314,6 +316,7 @@ public class App
                 break;
 
             case 31:
+                System.out.println("The population of a city");
                 System.out.println("Enter City: ");
                 String cty = sc.nextLine();
                 report = db.getReportThirtyOne(cty);
@@ -321,6 +324,7 @@ public class App
                 break;
 
             case 32:
+                System.out.println("The number of people who speak Chinese, English, Hindi, Spanish or Arabic in the world.");
                 report = db.getLanguageReport();
                 app.printReport(report);
                 break;
