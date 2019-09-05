@@ -1,10 +1,6 @@
 package com.napier.sem;
-
-//import com.sun.tools.javac.code.Type;
-
 import java.sql.*;
 
-import static com.mysql.cj.x.protobuf.MysqlxCrud.Order.Direction.DESC;
 
 public class DatabaseHandler {
 
@@ -1085,7 +1081,7 @@ public class DatabaseHandler {
             Statement stmt = con.createStatement();
             String strSelect = "";
             ResultSet rset = null;
-            strSelect = "select cl.language, sum(cl.percentage*c.population) as speakerlangugaepop, sum(c.population*cl.percentage)/(select sum(population) from country) as worldpercentage from countrylanguage cl, country c where cl.countrycode=c.code and cl.language in ('English','Arabic','Hindi','Chinese','Spanish') group by cl.language order by worldpercentage DESC;";
+            strSelect = "select cl.language, sum(cl.percentage*c.population) as speakerlangugaepop, sum(c.population*cl.percentage)/(select sum(population) from country) as worldpercentage from countrylanguage cl, country c where cl.countrycode=c.code and cl.language in ('English','Arabic','Hindi','Chinese','Spanish') group by cl.language order by speakerlangugaepop DESC;";
 
             rset = stmt.executeQuery(strSelect);
 
