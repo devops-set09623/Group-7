@@ -270,16 +270,19 @@ public class App
                 break;
 
             case 25:
+                System.out.println("The population of people, people living in cities, and people not living in cities in each country");
                 report = db.getReportTwentyFive();
                 app.printReport(report);
                 break;
 
             case 26:
+                System.out.println("The population of the world");
                 report = db.getReportTwentySix();
                 app.printReport(report);
                 break;
 
             case 27:
+                System.out.println("The population of a continent");
                 System.out.println("Enter Continent: ");
                 String contt = sc.nextLine();
                 report = db.getReportTwentySeven(contt);
@@ -288,6 +291,7 @@ public class App
 
 
             case 28:
+                System.out.println("The population of a region");
                 System.out.println("Enter Region: ");
                 String regg = sc.nextLine();
                 report = db.getReportTwentyEight(regg);
