@@ -59,8 +59,5 @@
 | 29 | The population of a country. | Yes | ![](screenshot/29.PNG) |
 | 30 | The population of a district. | Yes | ![](screenshot/30.PNG) |
 | 31 | The population of a city. | Yes | ![](screenshot/31.PNG) |
-| 32 | the number of people who speak the Chinese languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/32.PNG) |
-| 33 | the number of people who speak the English languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/33.PNG) |
-| 34 | the number of people who speak the Hindi languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/34.PNG) |
-| 35 | the number of people who speak the Spanish languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/35.PNG) |
-| 36 | the number of people who speak the Arabic languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/36.PNG) |
+| 32 | the number of people who speak the Chinese,English,Hindi,Spanish,Arabic languages from greatest number to smallest, including the percentage of the world population. | Yes | ![](screenshot/32.PNG) |
+
