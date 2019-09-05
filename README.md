@@ -29,7 +29,7 @@
 | ID | Name | Met | Screenshot |
 | --- | --- | --- | --- |
 | 1 | All the countries in the world organised by largest population to smallest. | Yes | ![](screenshot/1.PNG) |
-| 2 | All the countries in a continent organised by largest population to smallest. | Yes | ![](screenshot/2.png) |
+| 2 | All the countries in a continent organised by largest population to smallest. | Yes | ![](screenshot/2.PNG) |
 | 3 | All the countries in a region organised by largest population to smallest. | Yes | ![](screenshot/3.PNG) |
 | 4 | The top N populated countries in the world where N is provided by the user. | Yes | ![](screenshot/4.PNG) |
 | 5 | The top N populated countries in a continent where N is provided by the user. | Yes | ![](screenshot/5.PNG) |
