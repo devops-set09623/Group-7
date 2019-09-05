@@ -76,17 +76,20 @@ public class App
         switch (num) {
 
             case 1:
+                System.out.println("All the countries in the world organised by largest population to smallest");
                 report = db.getReportOne();
                 app.printReport(report);
                 break;
 
             case 2:
+                System.out.println("All the countries in a continent organised by largest population to smallest");
                 System.out.println("Enter continent");
                 report=db.getReportTwo(sc.nextLine());
                 app.printReport(report);
                 break;
 
             case 3:
+                System.out.println("All the countries in a region organised by largest population to smallest");
                 System.out.println("Enter region");
                 report=db.getReportThree(sc.nextLine());
                 app.printReport(report);
@@ -94,12 +97,14 @@ public class App
                 break;
 
             case 4:
+                System.out.println("The top N populated countries in the world");
                 System.out.println("Enter number");
                 report = db.getReportFour(sc.nextInt());
                 app.printReport(report);
                 break;
 
             case 5:
+                System.out.println("The top N populated continent in the world");
                 System.out.println("Enter continent");
                 String Continent = sc.nextLine();
                 System.out.println("Enter number");
@@ -109,6 +114,7 @@ public class App
                 break;
 
             case 6:
+                System.out.println("The top N populated countries in a region");
                 System.out.println("Enter region");
                 String region = sc.nextLine();
                 System.out.println("Enter number");
@@ -118,6 +124,7 @@ public class App
                 break;
 
             case 7:
+                System.out.println("All the cities in the world organised by largest population to smallest");
                 report = db.getReportSeven();
                 app.printReport(report);
                 break;
@@ -341,11 +348,7 @@ public class App
                 "The population of a country",
                 "The population of a district",
                 "The population of a city",
-                "The number of people who speak Chinese",
-                "The number of people who speak English",
-                "The number of people who speak Hindi",
-                "The number of people who speak Spanish",
-                "The number of people who speak Arabic"
+                "The number of people who speak Chinese, English, Hindi, Spanish or Arabic in the world."
         };
         System.out.println("Choose a report no:");
         for(int i=0; i<reportNo.length;i++){
