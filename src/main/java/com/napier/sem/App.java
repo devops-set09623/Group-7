@@ -207,13 +207,14 @@ public class App
                 break;
 
             case 17:
-
+                System.out.println("All the capital cities in the world organised by largest population to smallest");
                 report = db.getReportSeventeen();
                 app.printReport(report);
                 break;
 
 
             case 18:
+                System.out.println("All the capital cities in a continent organised by largest population to smallest");
                 System.out.println("Enter continent: ");
                 String continen = sc.nextLine();
                 report = db.getReportEighteen(continen);
@@ -221,6 +222,7 @@ public class App
                 break;
 
             case 19:
+                System.out.println("All the capital cities in a region organised by largest to smallest");
                 System.out.println("Enter region: ");
                 String regio = sc.nextLine();
                 report = db.getReportNineteen(regio);
@@ -228,6 +230,7 @@ public class App
                 break;
 
             case 20:
+                System.out.println("The top N populated capital cities in the world");
                 System.out.println("Enter no: ");
                 int re = sc.nextInt();
                 report = db.getReportTwenty(re);
