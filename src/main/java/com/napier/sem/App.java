@@ -84,7 +84,6 @@ public class App
                 System.out.println("Enter continent");
                 report=db.getReportTwo(sc.nextLine());
                 app.printReport(report);
-                System.out.flush();
                 break;
 
             case 3:
@@ -360,6 +359,11 @@ public class App
      * To produce formatted report of city, country, language, population, total population
      * @param report
      */
+
+
+
+
+
 
     protected void printReport(Report report) {
 
