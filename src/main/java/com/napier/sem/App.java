@@ -238,6 +238,7 @@ public class App
                 break;
 
             case 21:
+                System.out.println("The top N populated capital cities in a continent");
                 System.out.println("Enter Continent: ");
                 String cont = sc.nextLine();
                 System.out.println("Enter number: ");
@@ -247,6 +248,7 @@ public class App
                 break;
 
             case 22:
+                System.out.println("The top N populated capital cities in a region");
                 System.out.println("Enter Region: ");
                 String regi = sc.nextLine();
                 System.out.println("Enter number: ");
@@ -256,11 +258,13 @@ public class App
                 break;
 
             case 23:
+                System.out.println("The population of people, people living in cities, and people not living in cities in each continent");
                 report = db.getReportTwentyThree();
                 app.printReport(report);
                 break;
 
             case 24:
+                System.out.println("The population of people, people living in cities, and people not living in cities in each region");
                 report = db.getReportTwentyFour();
                 app.printReport(report);
                 break;
