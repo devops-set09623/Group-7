@@ -1,0 +1,5 @@
+To run this application
+1. Docker 
+2. Docker Compose 
+3. Maven 3.6.1
+4. JDK 11.0.2 
